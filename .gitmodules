@@ -1,0 +1,15 @@
+[submodule "official-examples"]
+	path = official-examples
+	url = https://github.com/hailo-ai/hailo-rpi5-examples.git
+[submodule "community-projects/tappas"]
+	path = community-projects/tappas
+	url = https://github.com/hailo-ai/tappas.git
+[submodule "community-projects/degirum-hailo-examples"]
+	path = community-projects/degirum-hailo-examples
+	url = https://github.com/DeGirum/hailo_examples.git
+[submodule "community-projects/cpp-yolov8-example"]
+	path = community-projects/cpp-yolov8-example
+	url = https://github.com/bmharper/hailo-rpi5-yolov8.git
+[submodule "community-projects/hailo-ros2-integration"]
+	path = community-projects/hailo-ros2-integration
+	url = https://github.com/kyrikakis/hailo_tappas_ros2.git
