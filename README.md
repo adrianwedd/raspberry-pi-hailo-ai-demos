@@ -13,12 +13,14 @@ This repository collects and organizes the most exciting Hailo AI projects for R
 
 | Category | Projects | Count | Status |
 |----------|----------|-------|---------|
-| **Official** | hailo-rpi5-examples, tappas, model-zoo, hailort, app-examples | 5 | ✅ Active |
-| **YOLO** | YOLOv8 C++, YOLO guide, benchmarks, utilities | 4 | ✅ Active |
-| **Computer Vision** | Gesture recognition, detection pipelines | 2 | ✅ Active |
+| **Official** | hailo-rpi5-examples, tappas, model-zoo, hailort, meta-hailo | 5 | ✅ Active |
+| **YOLO** | YOLOv8 C++, YOLO guide, benchmarks, utilities, Ultralytics | 6 | ✅ Active |
+| **Computer Vision** | Gesture recognition, tracking, vision apps | 4 | ✅ Active |
+| **Community** | Frigate, DeGirum, tutorials, API servers | 8 | ✅ Active |
+| **Web APIs** | FastAPI, Gradio, ONNX.js, Docker solutions | 5 | ✅ Active |
+| **Tools & Utilities** | Model converters, GStreamer, extended zoo | 5 | ✅ Active |
+| **Educational** | PCIe guide, tutorials, documentation | 2 | ✅ Active |
 | **Robotics** | ROS2 integration, TAPPAS bridge | 1 | ✅ Active |
-| **Community** | DeGirum SDK, API servers, tutorials | 4 | ✅ Active |
-| **Tools** | Model converters, Yocto layers, utilities | 2 | ✅ Active |
 
 ### 🎪 Quick Start
 
@@ -54,7 +56,7 @@ hailo-ai-demos/
 └── benchmarks/            # Performance comparisons
 ```
 
-**📚 Total: 18+ active repositories** | [View Full List](REPOS.md)
+**📚 Total: 37+ active repositories** | [View Full List](REPOS.md) | [Verified Collection](VERIFIED_REPOS.md)
 
 ## 🛠️ System Requirements
 

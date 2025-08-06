@@ -58,3 +58,54 @@
 [submodule "tools-utilities/meta-hailo-yocto"]
 	path = tools-utilities/meta-hailo-yocto
 	url = https://github.com/hailo-ai/meta-hailo.git
+[submodule "official-repositories/meta-hailo"]
+	path = official-repositories/meta-hailo
+	url = https://github.com/hailo-ai/meta-hailo.git
+[submodule "computer-vision/dataroot-tracker"]
+	path = computer-vision/dataroot-tracker
+	url = https://github.com/dataroot/hailo-rpi5.git
+[submodule "computer-vision/vision-pro-max"]
+	path = computer-vision/vision-pro-max
+	url = https://github.com/DI-HAL/Vision-pro-MAX.git
+[submodule "yolo-implementations/raspi-yolo-training"]
+	path = yolo-implementations/raspi-yolo-training
+	url = https://github.com/LukeDitria/RasPi_YOLO.git
+[submodule "community-projects/frigate-nvr"]
+	path = community-projects/frigate-nvr
+	url = https://github.com/blakeblackshear/frigate.git
+[submodule "community-projects/frigate-homeassistant"]
+	path = community-projects/frigate-homeassistant
+	url = https://github.com/blakeblackshear/frigate-hass-integration.git
+[submodule "web-apis/hailo-mini-server"]
+	path = web-apis/hailo-mini-server
+	url = https://github.com/serg987/hailo-mini-od-server.git
+[submodule "tools-utilities/extended-model-zoo"]
+	path = tools-utilities/extended-model-zoo
+	url = https://github.com/Maufrei/hailo_models.git
+[submodule "tools-utilities/gstreamer-examples"]
+	path = tools-utilities/gstreamer-examples
+	url = https://github.com/JarnoRalli/gstreamer-examples.git
+[submodule "web-apis/hailo-docker-ubuntu"]
+	path = web-apis/hailo-docker-ubuntu
+	url = https://github.com/jpm-canonical/hailo-docker-ubuntu.git
+[submodule "web-apis/onnxjs"]
+	path = web-apis/onnxjs
+	url = https://github.com/microsoft/onnxjs.git
+[submodule "community-projects/rtsp-examples"]
+	path = community-projects/rtsp-examples
+	url = https://github.com/MrYodaylay/hailo-rpi5-examples-rtsp.git
+[submodule "yolo-implementations/lj-hao-cm4-benchmarks"]
+	path = yolo-implementations/lj-hao-cm4-benchmarks
+	url = https://github.com/LJ-Hao/Benchmark-of-Yolo-on-CM4-with-AI-kit.git
+[submodule "yolo-implementations/ultralytics-official"]
+	path = yolo-implementations/ultralytics-official
+	url = https://github.com/ultralytics/ultralytics.git
+[submodule "web-apis/gradio-ui"]
+	path = web-apis/gradio-ui
+	url = https://github.com/gradio-app/gradio.git
+[submodule "web-apis/fastapi"]
+	path = web-apis/fastapi
+	url = https://github.com/fastapi/fastapi.git
+[submodule "educational-resources/pi-pcie-guide"]
+	path = educational-resources/pi-pcie-guide
+	url = https://github.com/geerlingguy/raspberry-pi-pcie-devices.git
