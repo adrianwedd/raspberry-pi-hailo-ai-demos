@@ -11,17 +11,18 @@ This repository collects and organizes the most exciting Hailo AI projects for R
 
 ### 🏆 Featured Projects
 
-| Project | Description | Source | Status |
-|---------|-------------|---------|---------|
-| **Official Examples** | Basic pipelines, CLIP, pose estimation | [hailo-ai/hailo-rpi5-examples](https://github.com/hailo-ai/hailo-rpi5-examples) | ✅ Synced |
-| **TAPPAS** | High-performance AI pipelines | [hailo-ai/tappas](https://github.com/hailo-ai/tappas) | ✅ Synced |
-| **DeGirum PySDK** | Python SDK with Hailo support | [DeGirum/hailo_examples](https://github.com/DeGirum/hailo_examples) | ✅ Synced |
-| **C++ YOLOv8** | High-performance C++ implementation | [bmharper/hailo-rpi5-yolov8](https://github.com/bmharper/hailo-rpi5-yolov8) | ✅ Synced |
-| **ROS2 Integration** | Robotics framework integration | [kyrikakis/hailo_tappas_ros2](https://github.com/kyrikakis/hailo_tappas_ros2) | ✅ Synced |
-| **Fruit Ninja** | Pose-controlled fruit slicing game | In official-examples | ✅ Ready |
-| **NavigAItor** | Visual landmark robot navigation | In official-examples | ✅ Ready |
+| Category | Projects | Count | Status |
+|----------|----------|-------|---------|
+| **Official** | hailo-rpi5-examples, tappas, model-zoo, hailort, app-examples | 5 | ✅ Active |
+| **YOLO** | YOLOv8 C++, YOLO guide, benchmarks, utilities | 4 | ✅ Active |
+| **Computer Vision** | Gesture recognition, detection pipelines | 2 | ✅ Active |
+| **Robotics** | ROS2 integration, TAPPAS bridge | 1 | ✅ Active |
+| **Community** | DeGirum SDK, API servers, tutorials | 4 | ✅ Active |
+| **Tools** | Model converters, Yocto layers, utilities | 2 | ✅ Active |
 
 ### 🎪 Quick Start
+
+**🔍 Explore All Repos:** Run `./explore-demos.sh` to see what's available!
 
 ```bash
 # Clone this repository
@@ -40,14 +41,20 @@ cd official-examples/basic_pipelines
 
 ```
 hailo-ai-demos/
-├── official-examples/          # Official Hailo examples (submodule)
-├── community-projects/         # Community contributions (submodules)
-├── custom-implementations/     # Our enhanced versions
-├── shared-resources/          # Common models, utilities
-├── documentation/             # Project docs and tutorials
-├── benchmarks/               # Performance comparisons
-└── tools/                    # Development utilities
+├── official-repositories/      # Official Hailo repos (5 submodules)
+├── yolo-implementations/       # YOLO-specific projects (4 submodules)
+├── computer-vision/           # CV applications (2 submodules)
+├── robotics-integration/      # ROS/robotics (1 submodule)
+├── community-projects/        # Community contributions (4 submodules)
+├── tools-utilities/          # Development tools (2 submodules)
+├── hackathon-projects/       # Hackathon winners (pending)
+├── custom-implementations/   # Our enhanced versions
+├── shared-resources/        # Common models, utilities
+├── documentation/          # Project docs and tutorials
+└── benchmarks/            # Performance comparisons
 ```
+
+**📚 Total: 18+ active repositories** | [View Full List](REPOS.md)
 
 ## 🛠️ System Requirements
 

@@ -13,3 +13,48 @@
 [submodule "community-projects/hailo-ros2-integration"]
 	path = community-projects/hailo-ros2-integration
 	url = https://github.com/kyrikakis/hailo_tappas_ros2.git
+[submodule "official-repositories/hailo-rpi5-examples"]
+	path = official-repositories/hailo-rpi5-examples
+	url = https://github.com/hailo-ai/hailo-rpi5-examples.git
+[submodule "official-repositories/tappas"]
+	path = official-repositories/tappas
+	url = https://github.com/hailo-ai/tappas.git
+[submodule "official-repositories/hailo-model-zoo"]
+	path = official-repositories/hailo-model-zoo
+	url = https://github.com/hailo-ai/hailo_model_zoo.git
+[submodule "official-repositories/hailort"]
+	path = official-repositories/hailort
+	url = https://github.com/hailo-ai/hailort.git
+[submodule "yolo-implementations/hailo-yolo-guide"]
+	path = yolo-implementations/hailo-yolo-guide
+	url = https://github.com/seapanda0/hailo-yolo-guide.git
+[submodule "yolo-implementations/cpp-yolov8"]
+	path = yolo-implementations/cpp-yolov8
+	url = https://github.com/bmharper/hailo-rpi5-yolov8.git
+[submodule "yolo-implementations/rpi5-yolov8-utility"]
+	path = yolo-implementations/rpi5-yolov8-utility
+	url = https://github.com/ahillelt/rpi5-hailo8l-yolov8-utility.git
+[submodule "community-projects/degirum-examples"]
+	path = community-projects/degirum-examples
+	url = https://github.com/DeGirum/hailo_examples.git
+[submodule "robotics-integration/hailo-ros2"]
+	path = robotics-integration/hailo-ros2
+	url = https://github.com/kyrikakis/hailo_tappas_ros2.git
+[submodule "computer-vision/gesture-recognition"]
+	path = computer-vision/gesture-recognition
+	url = https://github.com/sangbin-sangbin/hailo-gesture-recognition.git
+[submodule "computer-vision/hailo8-detection"]
+	path = computer-vision/hailo8-detection
+	url = https://github.com/ACCESSLab/hailo8_detection.git
+[submodule "community-projects/hailo-api-detector"]
+	path = community-projects/hailo-api-detector
+	url = https://github.com/gb-0001/hailo-8L-api-detector.git
+[submodule "community-projects/seeed-zero-to-hero"]
+	path = community-projects/seeed-zero-to-hero
+	url = https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero.git
+[submodule "tools-utilities/seeed-toolbox"]
+	path = tools-utilities/seeed-toolbox
+	url = https://github.com/Seeed-Projects/hailo_toolbox.git
+[submodule "tools-utilities/meta-hailo-yocto"]
+	path = tools-utilities/meta-hailo-yocto
+	url = https://github.com/hailo-ai/meta-hailo.git
