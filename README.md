@@ -14,11 +14,12 @@ This repository collects and organizes the most exciting Hailo AI projects for R
 | Project | Description | Source | Status |
 |---------|-------------|---------|---------|
 | **Official Examples** | Basic pipelines, CLIP, pose estimation | [hailo-ai/hailo-rpi5-examples](https://github.com/hailo-ai/hailo-rpi5-examples) | ✅ Synced |
-| **Fruit Ninja** | Pose-controlled fruit slicing game | Community Project | ✅ Enhanced |
-| **NavigAItor** | Visual landmark robot navigation | Hackathon Winner | ✅ Ready |
-| **Wildlife Monitor** | Smart animal detection system | Custom Implementation | 🚧 In Progress |
-| **AlertAlfred** | AI security system | Community Project | 📋 Planned |
-| **Traffic Monitor** | Real-time vehicle classification | Custom Implementation | 📋 Planned |
+| **TAPPAS** | High-performance AI pipelines | [hailo-ai/tappas](https://github.com/hailo-ai/tappas) | ✅ Synced |
+| **DeGirum PySDK** | Python SDK with Hailo support | [DeGirum/hailo_examples](https://github.com/DeGirum/hailo_examples) | ✅ Synced |
+| **C++ YOLOv8** | High-performance C++ implementation | [bmharper/hailo-rpi5-yolov8](https://github.com/bmharper/hailo-rpi5-yolov8) | ✅ Synced |
+| **ROS2 Integration** | Robotics framework integration | [kyrikakis/hailo_tappas_ros2](https://github.com/kyrikakis/hailo_tappas_ros2) | ✅ Synced |
+| **Fruit Ninja** | Pose-controlled fruit slicing game | In official-examples | ✅ Ready |
+| **NavigAItor** | Visual landmark robot navigation | In official-examples | ✅ Ready |
 
 ### 🎪 Quick Start
 
@@ -205,8 +206,10 @@ We welcome contributions! Here's how to add new projects:
 - [x] Establish sync workflows
 
 ### Phase 2: Community Projects 🚧
-- [ ] Add all hackathon projects
-- [ ] Integrate community contributions
+- [x] Add TAPPAS high-performance pipelines
+- [x] Add DeGirum PySDK examples
+- [x] Add C++ YOLOv8 implementation
+- [x] Add ROS2 integration package
 - [ ] Create performance benchmarks
 - [ ] Develop testing framework
 
