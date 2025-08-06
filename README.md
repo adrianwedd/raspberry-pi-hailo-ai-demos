@@ -4,6 +4,9 @@
 ![Hailo AI](https://img.shields.io/badge/Hailo-AI%20Accelerator-blue)
 ![Pi5](https://img.shields.io/badge/Raspberry%20Pi-5-red)
 ![Status](https://img.shields.io/badge/Status-Active-green)
+![Submodules](https://github.com/adrianwedd/raspberry-pi-hailo-ai-demos/actions/workflows/check-submodules.yml/badge.svg)
+![Sync Status](https://github.com/adrianwedd/raspberry-pi-hailo-ai-demos/actions/workflows/sync-submodules.yml/badge.svg)
+![Repos](https://img.shields.io/badge/Repositories-37-brightgreen)
 
 ## 🎯 About This Repository
 

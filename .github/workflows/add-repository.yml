@@ -1,0 +1,153 @@
+name: Add New Repository
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: 'GitHub repository URL (e.g., https://github.com/user/repo.git)'
+        required: true
+        type: string
+      category:
+        description: 'Category folder'
+        required: true
+        type: choice
+        options:
+          - official-repositories
+          - yolo-implementations
+          - computer-vision
+          - community-projects
+          - web-apis
+          - tools-utilities
+          - educational-resources
+          - robotics-integration
+          - embedded-systems
+          - surveillance-security
+          - hackathon-projects
+      submodule_name:
+        description: 'Submodule folder name (e.g., my-awesome-project)'
+        required: true
+        type: string
+      description:
+        description: 'Brief description of the repository'
+        required: true
+        type: string
+
+jobs:
+  add-repo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Validate inputs
+        run: |
+          # Validate repository URL
+          if [[ ! "${{ github.event.inputs.repo_url }}" =~ ^https://github\.com/[^/]+/[^/]+\.git$ ]]; then
+            echo "❌ Invalid repository URL format"
+            echo "Expected format: https://github.com/user/repo.git"
+            exit 1
+          fi
+          
+          # Validate submodule name
+          if [[ ! "${{ github.event.inputs.submodule_name }}" =~ ^[a-z0-9-]+$ ]]; then
+            echo "❌ Invalid submodule name"
+            echo "Use only lowercase letters, numbers, and hyphens"
+            exit 1
+          fi
+          
+          # Check if submodule already exists
+          if [ -d "${{ github.event.inputs.category }}/${{ github.event.inputs.submodule_name }}" ]; then
+            echo "❌ Submodule already exists at this location"
+            exit 1
+          fi
+
+      - name: Add submodule
+        run: |
+          echo "📦 Adding new submodule..."
+          
+          # Create category directory if it doesn't exist
+          mkdir -p "${{ github.event.inputs.category }}"
+          
+          # Add the submodule
+          git submodule add "${{ github.event.inputs.repo_url }}" "${{ github.event.inputs.category }}/${{ github.event.inputs.submodule_name }}"
+          
+          # Initialize and update the submodule
+          git submodule update --init --recursive "${{ github.event.inputs.category }}/${{ github.event.inputs.submodule_name }}"
+          
+          echo "✅ Submodule added successfully"
+
+      - name: Update documentation
+        run: |
+          # Add entry to REPOS.md if it exists
+          if [ -f "REPOS.md" ]; then
+            echo "" >> REPOS.md
+            echo "### ${{ github.event.inputs.submodule_name }}" >> REPOS.md
+            echo "- **Category**: ${{ github.event.inputs.category }}" >> REPOS.md
+            echo "- **Repository**: ${{ github.event.inputs.repo_url }}" >> REPOS.md
+            echo "- **Description**: ${{ github.event.inputs.description }}" >> REPOS.md
+            echo "- **Added**: $(date '+%Y-%m-%d')" >> REPOS.md
+          fi
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "➕ Add new repository: ${{ github.event.inputs.submodule_name }}
+          
+          Category: ${{ github.event.inputs.category }}
+          Repository: ${{ github.event.inputs.repo_url }}
+          Description: ${{ github.event.inputs.description }}
+          
+          Added by: @${{ github.actor }}
+          Date: $(date '+%Y-%m-%d %H:%M:%S UTC')"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "➕ Add ${{ github.event.inputs.submodule_name }} to ${{ github.event.inputs.category }}"
+          title: "➕ Add new repository: ${{ github.event.inputs.submodule_name }}"
+          body: |
+            ## ➕ New Repository Addition
+            
+            ### 📦 Repository Details
+            - **Name**: `${{ github.event.inputs.submodule_name }}`
+            - **Category**: `${{ github.event.inputs.category }}`
+            - **URL**: ${{ github.event.inputs.repo_url }}
+            - **Description**: ${{ github.event.inputs.description }}
+            
+            ### 👤 Requested by
+            @${{ github.actor }}
+            
+            ### ✅ Validation
+            - [x] Repository URL is valid
+            - [x] Submodule name follows conventions
+            - [x] Category exists
+            - [x] No conflicts with existing submodules
+            
+            ### 📝 Please Review
+            - [ ] Repository is relevant to Raspberry Pi + Hailo-8L
+            - [ ] Repository is actively maintained
+            - [ ] No security concerns
+            - [ ] Documentation updated
+            
+            ---
+            *This PR was automatically created by the Add Repository workflow*
+          branch: add-repo-${{ github.event.inputs.submodule_name }}
+          delete-branch: true
+          labels: |
+            new-repository
+            automated
+            review-needed
